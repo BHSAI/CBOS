@@ -1,0 +1,2 @@
+rocs -query QAHR_0000001.oeb.gz -dbase TR_AHR.oeb.gz -rankby combo -chemff ImplicitMillsDean -besthits 10000 -outputquery true -nostructs true -logfile ROCS_AHR_1.log -prefix AHRrocs_1 -report one -status none
+rocs -query QAHR_0000002.oeb.gz -dbase TR_AHR.oeb.gz -rankby combo -chemff ImplicitMillsDean -besthits 10000 -outputquery true -nostructs true -logfile ROCS_AHR_2.log -prefix AHRrocs_2 -report one -status none

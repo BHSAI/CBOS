@@ -1,0 +1,5 @@
+filter -in Input.sdf -out remmacAHR.oeb.gz -filter nonmacrocycle -prefix AHRnonmac
+filter -in remmacAHR.oeb.gz -out AHRFIL.oeb.gz -filter ../FILTER_DRUGMD2018.txt -fail AHR_fail -table AHR.table -tableFlag true -log AHRfilter.log -prefix AHR
+oeomega classic -in AHRFIL.oeb.gz -out QAHR.oeb.gz -strictstereo false -maxconfs 1 -prefix QAHRomeg
+chunker -in QAHR.oeb.gz -base QAHR_ -nchunks 2
+oeomega classic -in AHRFIL.oeb.gz -out TR_AHR.oeb.gz -strictstereo false -prefix TR_AHRomeg
