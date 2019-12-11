@@ -7,6 +7,7 @@ Supporting information for paper: Abdulhameed et al. Correction based on shuffli
 
  
 1. example_run
+
 This directory contains data and scripts to perform all steps reported in the paper starting from input .sdf file. 
 
 A typical run starts with sdf file of compounds with known activity for a target. The sdf file of compounds are passed through openeye programs (filter, omega, and rocs). 
@@ -21,10 +22,12 @@ Finally, R scripts are used to start from the chemical vs chemical similarity ma
  - 2_AHR_ROCS_output_process
 
  - 3_AHR_MAX_CBOS_scores
+
 (please refer to readme in each sub-directory)
 
 
 2. Data_scripts_reproduce_AUC_14targets
+
 This directory has 14 sub-directory for each of the 14 targets analyzed. Each sub-directory has data and R scripts that will run either CBOS or MAX score and provide the AUC and EF10 for each target (as reported in the paper). Please run the R scripts in each sub-directory to obtain the AUC/EF values. The data points together will create Figure 1 in the paper. 
 
 
