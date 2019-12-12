@@ -16,7 +16,7 @@ The output from ROCS is .rpt file. R script is used to convert the .rpt file int
 
 Finally, R scripts are used to start from the chemical vs chemical similarity matrix and calcualte CBOS score. In this paper, for virtual screening evaluation, we split the actives into reference compounds and keep the rest of actives along with inactives as the screening set. We evaluated the standard MAX score and CBOS score performance using ROC AUC values and enrichment factor 10% (EF10) using the screening set.
 
-"example_run" has 3 sub-directories:
+"example_run" has three sub-directories:
  - 1_AHR_Input_sdf_other_files
 
  - 2_AHR_ROCS_output_process
