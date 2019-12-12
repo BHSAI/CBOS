@@ -30,4 +30,16 @@ Finally, R scripts are used to start from the chemical vs chemical similarity ma
 
 This directory has 14 sub-directory for each of the 14 targets analyzed. Each sub-directory has data and R scripts that will run either CBOS or MAX score and provide the AUC and EF10 for each target (as reported in the paper). Please run the R scripts in each sub-directory to obtain the AUC/EF values. The data points together will create Figure 1 in the paper. 
 
+3. data
+
+This directory contains two sub-directories:
+
+- Activity_annotation_files_for_14targets
+
+Pubchem CIDs were given for each compound along with their activity data against a target.  We have provided seperate annotation data for each of the 14 targets studied.
+
+- Input_sdf_files_for_ROCS_for_14targets
+
+This directory contains sdf files of compounds used in this study. The sdf files can be used to run ROCS program. The activity data associated with these compounds are given in table format in the other sub-directory (Activity_annotation_files_for_14targets).
+
 
