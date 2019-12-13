@@ -1,0 +1,91 @@
+#/**********************************************************************
+#Copyright (C) 2000-2005 by OpenEye Scientific Software, Inc.
+#***********************************************************************/
+#This file defines the rules for filtering multi-structure files based on 
+#properties and substructure patterns.
+MIN_MOLWT      130         "Minimum molecular weight"
+MAX_MOLWT      1000         "Maximum molecular weight"
+
+#MIN_NUM_HVY   10         "Minimum number of heavy atoms"
+#MAX_NUM_HVY   25         "Maximum number of heavy atoms"
+
+#MIN_RING_SYS    0      "Minumum number of ring systems"
+#MAX_RING_SYS    10      "Maximum number of ring systems"
+
+#MIN_RING_SIZE    0       "Minimum atoms in any ring system"
+#MAX_RING_SIZE    20      "Maximum atoms in any ring system"
+
+#MIN_CON_NON_RING    0      "Minimum number of connected non-ring atoms"
+#MAX_CON_NON_RING    15     "Maximum number of connected non-ring atoms"
+
+#MIN_FCNGRP       0      "Minimum number of functional groups"
+#MAX_FCNGRP       12      "Maximum number of functional groups"
+
+#MIN_UNBRANCHED   0      "Minimum number of connected unbranched non-ring atoms"
+#MAX_UNBRANCHED   3      "Maximum number of connected unbranched non-ring atoms"
+
+MIN_CARBONS      4    "Minimum number of carbons"
+MAX_CARBONS      50      "Maximum number of carbons"
+
+#MIN_HETEROATOMS    2      "Minimum number of heteroatoms"
+#MAX_HETEROATOMS    12      "Maximum number of heteroatoms"
+
+#MIN_Het_C_Ratio    0.10    "Minimum heteroatom to carbon ratio"
+#MAX_Het_C_Ratio    1.1      "Maximum heteroatom to carbon ratio"      
+
+#MIN_HALIDE_FRACTION      0.0      "Minimum Halide Fraction"
+#MAX_HALIDE_FRACTION      0.5      "Maximum Halide Fraction"
+
+#count ring degrees of freedom = (#BondsInRing) - 4 - (RigidBondsInRing) - (BondsSharedWithOtherRings)
+#must be >= 0, from JCAMD 14:251-265,2000.
+#ADJUST_ROT_FOR_RING     true      "BOOLEAN for whether to estimate degrees of freedom in rings"
+
+MIN_ROT_BONDS    0      "Minimum number of rotatable bonds"
+MAX_ROT_BONDS    20      "Maximum number of rotatable bonds"
+
+#MIN_RIGID_BONDS    0      "Minimum number of rigid bonds"
+#MAX_RIGID_BONDS    25      "Maximum number of rigid bonds"
+
+#MIN_HBOND_DONORS  0      "Minimum number of hydrogen-bond donors"    
+#MAX_HBOND_DONORS  4      "Maximum number of hydrogen-bond donors"    
+
+#MIN_HBOND_ACCEPTORS  0      "Minimum number of hydrogen-bond acceptors"    
+#MAX_HBOND_ACCEPTORS  6      "Maximum number of hydrogen-bond acceptors"    
+
+#MIN_LIPINSKI_DONORS  0      "Minimum number of hydrogens on O & N atoms"
+#MAX_LIPINSKI_DONORS  5      "Maximum number of hydrogens on O & N atoms"
+
+#MIN_LIPINSKI_ACCEPTORS  0      "Minimum number of oxygen & nitrogen atoms"
+#MAX_LIPINSKI_ACCEPTORS  10      "Maximum number of oxygen & nitrogen atoms"
+
+#MIN_COUNT_FORMAL_CRG    0      "Minimum number formal charges"
+#MAX_COUNT_FORMAL_CRG    3      "Maximum number of formal charges"
+
+#MIN_SUM_FORMAL_CRG   -2      "Minimum sum of formal charges"
+#MAX_SUM_FORMAL_CRG    2      "Maximum sum of formal charges"
+
+#MIN_CHIRAL_CENTERS			0			"Minimum chiral centers"
+#MAX_CHIRAL_CENTERS			4			"Maximum chiral centers"
+
+#MIN_XLOGP      -5.0      "Minimum XLogP"
+#MAX_XLOGP       4.0      "Maximum XLogP"
+
+#choices are insoluble<poorly<moderately<soluble<very<highly
+#MIN_SOLUBILITY      moderately      "Minimum solubility"
+
+#PSA_USE_SandP   false    "Count S and P as polar atoms"
+#MIN_2D_PSA      0.0      "Minimum 2-Dimensional (SMILES) Polar Surface Area"
+#MAX_2D_PSA      150.0    "Maximum 2-Dimensional (SMILES) Polar Surface Area"
+
+#AGGREGATORS    true      "Eliminate known aggregators"
+#PRED_AGG       true      "Eliminate predicted aggregators"
+
+#secondary filters (based on multiple primary filters)
+#GSK_VEBER      true      "PSA>140 or >10 rot bonds"
+#MAX_LIPINSKI   1         "Maximum number of Lipinski violations"
+#MIN_ABS 0.5              "Minimum probability F>10% in rats"
+#PHARMACOPIA    true      "LogP > 5.88 or PSA > 131.6"
+
+ALLOWED_ELEMENTS  H,C,N,O,F,S,Cl,Br,P,I
+ELIMINATE_METALS Sc,Ti,V,Cr,Mn,Fe,Co,Ni,Cu,Zn,Y,Zr,Nb,Mo,Tc,Ru,Rh,Pd,Ag,Cd,As,Al
+
